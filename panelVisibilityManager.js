@@ -79,6 +79,7 @@ var PanelVisibilityManager = class HideTopBar_PanelVisibilityManager {
         this._updateStaticBox();
         this._bindTimeoutId = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT, 100, this._bindUIChanges.bind(this));
+        this.hide(0, "constructor");
     }
 
     hide(animationTime, trigger) {
